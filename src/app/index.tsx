@@ -8,7 +8,7 @@ import {
   TouchableWithoutFeedback,
   Keyboard,
   Dimensions,
-  FlatList,
+  FlatList
 } from "react-native";
 import { StatusBar } from "expo-status-bar";
 import {
@@ -51,13 +51,7 @@ const cardData = [
     price: "R$ 420",
     image: require("./assets/papa.png"),
   },
-  {
-    id: "4",
-    title: "Ranchão",
-    subtitle: "Correntina-BA",
-    price: "R$ 420",
-    image: require("./assets/papa.png"),
-  },
+  
 ];
 
 export default function Index() {
