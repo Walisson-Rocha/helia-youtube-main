@@ -8,7 +8,7 @@ import {
   TouchableWithoutFeedback,
   Keyboard,
   Dimensions,
-  FlatList
+  FlatList, // Importando FlatList
 } from "react-native";
 import { StatusBar } from "expo-status-bar";
 import {
@@ -85,7 +85,7 @@ export default function Index() {
           <FadersHorizontal size={32} color="#1AB65C" weight="thin" />
         </View>
 
-        <View style={styles.content}>
+        <View style={styles.cardsContainer}>
           <FlatList
             data={cardData}
             renderItem={({ item }) => (
@@ -174,9 +174,10 @@ const styles = StyleSheet.create({
     flex: 1,
     color: "#F4f4f4",
   },
-  content: {
+  cardsContainer: {
     width: "100%",
-    gap: 20,
+    flex: 1, // Permite que os cards ocupem o restante do espaço disponível
+    marginBottom: 20, // Espaçamento inferior opcional
   },
   card: {
     width: "100%",
@@ -189,6 +190,7 @@ const styles = StyleSheet.create({
     gap: 10,
     padding: 15,
     justifyContent: "space-between",
+    marginBottom: 15, // Separação entre os cards
   },
   cardButton: {
     alignItems: "flex-start",
