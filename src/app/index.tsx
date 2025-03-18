@@ -20,7 +20,7 @@ import {
   Star,
 } from "phosphor-react-native"; // Importando os ícones necessários
 
-// Dados para os cartões
+
 const cardData = [
   {
     id: "1",
@@ -52,6 +52,52 @@ const cardData = [
     image: require("./assets/papa.png"),
   },
   
+  {
+    id: "4",
+    title: "Ranchão",
+    subtitle: "Correntina-BA",
+    price: "R$ 420",
+    image: require("./assets/papa.png"),
+  },
+
+  {
+    id: "1",
+    title: "Pousada Espaço Mil",
+    subtitle: "Corrente-PI",
+    description: "oi90909090909",
+    price: "R$ 420",
+    image: require("./assets/mil.png"),
+  },
+  {
+    id: "2",
+    title: "Jeronimo Hotel",
+    subtitle: "Corrente-PI",
+    price: "R$ 420",
+    image: require("./assets/jeronimo.png"),
+  },
+  {
+    id: "3",
+    title: "Pousada Papagayu´s",
+    subtitle: "Posse, Goiás",
+    price: "R$ 420",
+    image: require("./assets/papa.png"),
+  },
+  {
+    id: "4",
+    title: "Ranchão",
+    subtitle: "Correntina-BA",
+    price: "R$ 420",
+    image: require("./assets/papa.png"),
+  },
+  
+  {
+    id: "4",
+    title: "Ranchão",
+    subtitle: "Correntina-BA",
+    price: "R$ 420",
+    image: require("./assets/papa.png"),
+  },
+
 ];
 
 export default function Index() {
