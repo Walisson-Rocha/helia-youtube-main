@@ -1,7 +1,4 @@
-import {
-  Image,
-  Pressable,
-  StyleSheet,
+import { Image,Pressable,StyleSheet,
   Text,
   TextInput,
   View,
@@ -28,28 +25,28 @@ const cardData = [
     subtitle: "Corrente-PI",
     description: "oi90909090909",
     price: "R$ 420",
-    image: require("./assets/mil.png"),
+    image: require("../assets/mil.png"),
   },
   {
     id: "2",
     title: "Jeronimo Hotel",
     subtitle: "Corrente-PI",
     price: "R$ 420",
-    image: require("./assets/jeronimo.png"),
+    image: require("../assets/jeronimo.png"),
   },
   {
     id: "3",
     title: "Pousada Papagayu´s",
     subtitle: "Posse, Goiás",
     price: "R$ 420",
-    image: require("./assets/papa.png"),
+    image: require("../assets/papa.png"),
   },
   {
     id: "4",
     title: "Ranchão",
     subtitle: "Correntina-BA",
     price: "R$ 420",
-    image: require("./assets/papa.png"),
+    image: require("../assets/papa.png"),
   },
   
   {
@@ -57,7 +54,7 @@ const cardData = [
     title: "Ranchão",
     subtitle: "Correntina-BA",
     price: "R$ 420",
-    image: require("./assets/papa.png"),
+    image: require("../assets/papa.png"),
   },
 
   {
@@ -66,28 +63,28 @@ const cardData = [
     subtitle: "Corrente-PI",
     description: "oi90909090909",
     price: "R$ 420",
-    image: require("./assets/mil.png"),
+    image: require("../assets/mil.png"),
   },
   {
     id: "2",
     title: "Jeronimo Hotel",
     subtitle: "Corrente-PI",
     price: "R$ 420",
-    image: require("./assets/jeronimo.png"),
+    image: require("../assets/jeronimo.png"),
   },
   {
     id: "3",
     title: "Pousada Papagayu´s",
     subtitle: "Posse, Goiás",
     price: "R$ 420",
-    image: require("./assets/papa.png"),
+    image: require("../assets/papa.png"),
   },
   {
     id: "4",
     title: "Ranchão",
     subtitle: "Correntina-BA",
     price: "R$ 420",
-    image: require("./assets/papa.png"),
+    image: require("../assets/papa.png"),
   },
   
   {
@@ -95,7 +92,7 @@ const cardData = [
     title: "Ranchão",
     subtitle: "Correntina-BA",
     price: "R$ 420",
-    image: require("./assets/papa.png"),
+    image: require("../assets/papa.png"),
   },
 
 ];

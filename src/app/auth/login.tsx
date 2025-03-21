@@ -12,7 +12,7 @@ export default function Login() {
   const router = useRouter();
 
   function handleTabsHome() {
-    router.navigate("/tabs/home");
+    router.navigate("./tabs/home");
   }
 
   return (
