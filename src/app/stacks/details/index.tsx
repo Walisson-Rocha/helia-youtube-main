@@ -35,6 +35,7 @@ export default function Details() {
         <Image style={styles.containerGalleryImage} source={require("../../assets/hotel.png")} />
         <Image style={styles.containerGalleryImage} source={require("../../assets/hotel.png")} />
         <Image style={styles.containerGalleryImage} source={require("../../assets/hotel.png")} />
+        <Image style={styles.containerGalleryImage} source={require("../../assets/hotel.png")} />
       </ScrollView>
 
       <View style={styles.footer}>
