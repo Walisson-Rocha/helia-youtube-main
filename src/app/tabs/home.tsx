@@ -23,7 +23,7 @@ export default function Home() {
       <View style={styles.header}>
         <View style={styles.headerLeft}>
           <ChatsTeardrop size={30} color="#1ab65c" weight="duotone" />
-          <Text style={styles.headerLeftText}>Helia</Text>
+          <Text style={styles.headerLeftText}>TruckStop</Text>
         </View>
         <View style={styles.headerRight}>
           <BellRinging size={30} color="#f4f4f4" weight="duotone" />
@@ -31,7 +31,7 @@ export default function Home() {
         </View>
       </View>
 
-      <Text style={styles.userName}>Olá, Rodrigo Lucas</Text>
+      <Text style={styles.userName}>Olá, Walisson Rocha</Text>
 
       <View style={styles.inputContainer}>
         <MagnifyingGlass size={30} color="#757575" weight="duotone" />

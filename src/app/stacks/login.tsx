@@ -47,11 +47,11 @@ export default function Login() {
 
       <View style={styles.footer}>
         <TouchableOpacity style={styles.footerButton}>
-          <GoogleLogo color="#1ab55c" size={32} weight="fill" />
+          <GoogleLogo color="#F02735" size={32} weight="fill" />
         </TouchableOpacity>
 
         <TouchableOpacity style={styles.footerButton}>
-          <FacebookLogo color="#1ab55c" size={32} weight="fill" />
+          <FacebookLogo color="#0208aa" size={32} weight="fill" />
         </TouchableOpacity>
       </View>
 

@@ -1,7 +1,22 @@
 import { ArrowLeft, Bookmark, DotsThree, MapPin } from "phosphor-react-native";
 import { Image, ScrollView, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { useRouter } from "expo-router";
 
 export default function Details() {
+  const router = useRouter();
+
+  // Função para navegar para a tela de reserva
+  function handleReserve() {
+    router.navigate({
+      pathname: "/tabs/booking",
+      params: {
+        name: "Hotel Nova Vista",
+        location: "Rua Santa Lucia, Quadra 06, Lote 17.",
+        price: "$ 200",
+      },
+    });
+  }
+
   return (
     <View style={styles.container}>
       <View style={styles.header}>
@@ -44,7 +59,7 @@ export default function Details() {
           <Text style={styles.footerContainerTextMonth}>/ mês</Text>
         </View>
 
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity style={styles.button} onPress={handleReserve}>
           <Text style={styles.buttonText}>Alugar</Text>
         </TouchableOpacity>
       </View>
@@ -52,7 +67,7 @@ export default function Details() {
   );
 }
 
-export const styles = StyleSheet.create({
+const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#181a20",
