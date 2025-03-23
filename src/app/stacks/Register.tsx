@@ -1,19 +1,32 @@
 import { useRouter } from "expo-router";
+import { useState } from "react";
 import {
   ArrowLeft,
   EnvelopeSimple,
-  FacebookLogo,
-  GoogleLogo,
   LockKey,
+  User,
 } from "phosphor-react-native";
-import { StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
+import { StyleSheet, Text, TextInput, TouchableOpacity, View, Alert } from "react-native";
 
-export default function Login() {
+export default function Register() {
   const router = useRouter();
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
-  function handleTabsHome() {
-    router.navigate("./tabs/home");
-  }
+  const handleRegister = () => {
+    if (!name || !email || !password) {
+      Alert.alert("Erro", "Por favor, preencha todos os campos.");
+      return;
+    }
+
+    // Simulação de salvamento dos dados do usuário
+    const userData = { name, email, password };
+    console.log("Dados do usuário:", userData);
+
+    // Redirecionar para a tela de perfil
+    router.navigate("./tabs/profile");
+  };
 
   return (
     <View style={styles.container}>
@@ -21,12 +34,29 @@ export default function Login() {
         <ArrowLeft size={32} color="#f4f4f4" weight="regular" />
       </TouchableOpacity>
 
-      <Text style={styles.wellcome}>Faça login na sua conta</Text>
+      <Text style={styles.wellcome}>Crie sua conta</Text>
 
       <View style={styles.content}>
         <View style={styles.contentInput}>
+          <User size={32} color="#757575" />
+          <TextInput
+            placeholder="Seu nome"
+            style={styles.input}
+            placeholderTextColor="#757575"
+            value={name}
+            onChangeText={setName}
+          />
+        </View>
+
+        <View style={styles.contentInput}>
           <EnvelopeSimple size={32} color="#757575" />
-          <TextInput placeholder="Seu e-mail" style={styles.input} placeholderTextColor="#757575" />
+          <TextInput
+            placeholder="Seu e-mail"
+            style={styles.input}
+            placeholderTextColor="#757575"
+            value={email}
+            onChangeText={setEmail}
+          />
         </View>
 
         <View style={styles.contentInput}>
@@ -36,41 +66,27 @@ export default function Login() {
             style={styles.input}
             placeholderTextColor="#757575"
             secureTextEntry
+            value={password}
+            onChangeText={setPassword}
           />
         </View>
       </View>
 
-      <TouchableOpacity onPress={handleTabsHome} style={styles.buttonSignIn}>
-        <Text style={styles.buttonSignInText}>Entrar</Text>
+      <TouchableOpacity onPress={handleRegister} style={styles.buttonSignIn}>
+        <Text style={styles.buttonSignInText}>Cadastrar</Text>
       </TouchableOpacity>
 
-      <View style={styles.ContainerSeparator}>
-        <View style={styles.separator} />
-        <Text style={styles.ContainerSeparatorText}>ou continuar com</Text>
-        <View style={styles.separator} />
-      </View>
-
       <View style={styles.footer}>
-        <TouchableOpacity style={styles.footerButton}>
-          <GoogleLogo color="#F02735" size={32} weight="fill" />
-        </TouchableOpacity>
-
-        <TouchableOpacity style={styles.footerButton}>
-          <FacebookLogo color="#0208aa" size={32} weight="fill" />
-        </TouchableOpacity>
-      </View>
-
-      <View style={styles.footer}>
-        <Text style={styles.footerText}>Não possui conta?</Text>
-        <TouchableOpacity onPress={() => router.navigate("../stacks/register")}>
-          <Text style={styles.footerButtonText}>Cadastre-se</Text>
+        <Text style={styles.footerText}>Já possui conta?</Text>
+        <TouchableOpacity onPress={() => router.navigate("./login")}>
+          <Text style={styles.footerButtonText}>Faça login</Text>
         </TouchableOpacity>
       </View>
     </View>
   );
 }
 
-export const styles = StyleSheet.create({
+const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#181a20",
@@ -114,36 +130,10 @@ export const styles = StyleSheet.create({
     marginTop: 40,
   },
   buttonSignInText: { color: "#f4f4f4", fontSize: 16, fontWeight: "800" },
-  ContainerSeparator: {
-    width: "100%",
-    marginTop: 50,
-    flexDirection: "row",
-    justifyContent: "center",
-    alignItems: "center",
-    gap: 10,
-  },
-  separator: {
-    height: 1,
-    backgroundColor: "#757575",
-    flex: 1,
-  },
-  ContainerSeparatorText: {
-    color: "#f4f4f4",
-    fontSize: 16,
-    fontWeight: "400",
-  },
   footer: {
     marginTop: 50,
     flexDirection: "row",
     gap: 10,
-  },
-  footerButton: {
-    width: 100,
-    height: 60,
-    backgroundColor: "#1f222a",
-    justifyContent: "center",
-    alignItems: "center",
-    borderRadius: 12,
   },
   footerText: {
     color: "#f4f4f4",
